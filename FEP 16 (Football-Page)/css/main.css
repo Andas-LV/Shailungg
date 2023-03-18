@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+body{
+    color: white;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+.block{
+  display: none;
+}
+.block.active{
+  display: block;
+}
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    height: 15vh;
+    background-color: rgb(17, 17, 64);
+    border-bottom: 1px solid white;
+}
+
+.header-block {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.header-block:focus,
+.header-block:hover {
+  color: #fff;
+}
+
+.header-block:focus:after,
+.header-block:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.header-block:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/* MAIN */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background:url(./background/football-background.jpg);
+    background-size: cover;
+    height: 85vh;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    /* background-color:#181818; */
+    width: 800px;
+}
+.info-block{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-img{
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.img-info{
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+    margin-bottom: 15px;
+}
+.img{
+  width: 306px;
+  height: 204px;
+  border-radius: 5px;
+}
+.main-info{
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.text{
+    width: 500px;
+    font-weight: 300;
+    font-size: 16px;
+    width: 570px;
+}
